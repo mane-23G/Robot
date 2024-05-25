@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's your Robot?</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<!-- the page after input submission that contains the robot picture and robot info -->
+<body class="base">
+    <h1> <%= locals.out %> </h1>
+    <div id="id">        
+        <img src= <%=robot%>>
+        <div class="spacing">
+            Name: <%=lname%>, <%=fname%>
+            <br>
+            DOB: <%=dob%>
+            <br>
+            Age: <%=age%>
+            <br>
+            Gender: <%=gender%>
+            <br>
+            City: <%=city%>
+            <br>
+            State: <%=state%>
+            <br>
+            Country: <%=country%>
+            <br>
+            Cell Phone: <%=cnum%>
+        </div>
+    </div>
+
+    <div>
+        <p>To create a new Robot simply enter a new text in the box below</p>
+    </div>
+
+    <div class="button">
+        <form action="/submit" method="POST">
+            <input type="text" name="text" placeholder="Text, Email, IP Address" class="input" required>
+            <input type="submit" value="Submit" class="input-button">
+        </form>
+    </div>
+
+</body>
+</html>
